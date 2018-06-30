@@ -27,6 +27,10 @@ get(\String.count)
 
 pipe(incr, square, String.init, get(\.count))
 
+//scott try pipe
+[14].map(pipe(incr, square, String.init, get(\.count)))
+//
+
 struct User {
   var name: String
   var age: Int
