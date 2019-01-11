@@ -12,6 +12,8 @@ func square(_ x: Int) -> Int {
 [1, 2, 3].map(pipe(incr, square, String.init))
 
 //ss s
+let sinc = incr //(Int) -> Int
+String.init(4)
 let si = String.init(data:encoding:)
 let ssCurry = curry(String.init(data:encoding:))
 //ss e
@@ -75,4 +77,22 @@ with(ub, concat(
 ub.name //blob
 ub.age // 1
 // end scott
+
+// start scott try to use mutating props but fails
+let msetUserName = mprop(\User.name)
+//let mcapitalizeUserName = msetUserName(capitalized(Locale(identifier: "en")))
+
+let msetUserAge = mprop(\User.age)
+// 2019-01-10 need a mutating inc function
+//let mcelebrateBirthday = msetUserAge(incr)
+
+/*
+with(ub, concat(
+    mcapitalizeUserName,
+    mcelebrateBirthday
+))
+*/
+
+// end scott
+
 
