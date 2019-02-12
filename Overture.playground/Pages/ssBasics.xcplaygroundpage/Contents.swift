@@ -50,6 +50,12 @@ pipe(incr, square, String.init, get(\.count))
 
 //scott try pipe .. for keyPath see http://bit.ly/2QCAcs6 and http://bit.ly/2HgHguv
 [14].map(pipe(incr, square, String.init, get(\.count)))
+[14].map(pipe(incr, square, String.init))
+with(14,concat(incr))
+with(14,concat(incr,square))
+with(14,pipe(incr,square))
+//note this doesn't work, pipe needs two functions at least
+// with(14,pipe(incr))
 //
 
 struct User {
