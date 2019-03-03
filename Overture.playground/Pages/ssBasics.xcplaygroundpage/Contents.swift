@@ -99,6 +99,14 @@ with(ub, concat(
 ))
 */
 
+
+// start scott curry
+func sc1(_ x: Int, y: Int) -> Int {
+    return x * x + y
+}
+sc1(5, y: 4)
+curry(sc1)(4)(5)
 // end scott
+
 
 
